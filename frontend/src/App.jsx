@@ -9,18 +9,18 @@ import "./App.css";
 
 const App = () => {
   return (
-    <div className="bg-gray-100 min-h-screen dark:bg-gray-900">
-      <Navbar />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/blog/:id" element={<Blog />} />
-        </Routes>
-      </Router>
-    </div>
-  );
+    <Router>
+      <div className="bg-gray-100 min-h-screen dark:bg-gray-900">
+        <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/blog/:id" element={<Blog />} />
+          </Routes>
+      </div>
+    </Router>
+  );  
 };
 
 export default App;
