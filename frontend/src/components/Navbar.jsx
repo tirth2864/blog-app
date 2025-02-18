@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink,BrowserRouter } from "react-router-dom";
+import { NavLink, BrowserRouter } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
@@ -13,8 +13,12 @@ const Navbar = () => {
           My Blog
         </NavLink>
         <div className="flex items-center gap-4">
-          <NavLink to="/login">Login</NavLink>
-          <NavLink to="/register">Register</NavLink>
+          <NavLink to="/login" className="dark:text-white">
+            Login
+          </NavLink>
+          <NavLink to="/register" className="dark:text-white">
+            Register
+          </NavLink>
           <ThemeToggle />
         </div>
       </div>

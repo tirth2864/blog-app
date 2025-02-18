@@ -27,14 +27,16 @@ const Login = () => {
   return (
     <div className="flex items-center justify-center min-h-screen">
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-        <h2 className="font-bold flex justify-center mb-2 text-2xl">Login</h2>
+        <h2 className="font-bold flex justify-center mb-2 text-2xl dark:text-white">
+          Login
+        </h2>
         <input
           type="email"
           name="email"
           placeholder="name@example.com"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          className="w-full p-2 border rounded mb-5"
+          className="w-full p-2 border rounded mb-5 dark:text-white dark:border-white dark:placeholder-white"
         />
         <input
           type="password"
@@ -44,7 +46,7 @@ const Login = () => {
           onChange={(e) =>
             setFormData({ ...formData, password: e.target.value })
           }
-          className="w-full p-2 border rounded mb-5"
+          className="w-full p-2 border rounded mb-5 dark:border-white dark:placeholder-white"
         />
         <button
           type="submit"

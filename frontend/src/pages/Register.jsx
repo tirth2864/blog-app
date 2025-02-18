@@ -31,7 +31,7 @@ const Register = () => {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
       <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-50">
-        <h2 className="font-bold flex justify-center mb-2 text-2xl">
+        <h2 className="font-bold flex justify-center mb-2 text-2xl dark:text-white">
           Register
         </h2>
         <input
@@ -40,7 +40,7 @@ const Register = () => {
           placeholder="something_unique"
           value={formData.username}
           onChange={handleChange}
-          className="w-full p-2 border rounded mb-4"
+          className="w-full p-2 border rounded mb-4 dark:text-white dark:border-white dark:placeholder-white"
         />
         <input
           type="email"
@@ -48,7 +48,7 @@ const Register = () => {
           placeholder="name@example.com"
           value={formData.email}
           onChange={handleChange}
-          className="w-full p-2 border rounded mb-4"
+          className="w-full p-2 border rounded mb-4 dark:text-white dark:border-white dark:placeholder-white"
         />
         <input
           type="password"
@@ -56,7 +56,7 @@ const Register = () => {
           placeholder="top#secret"
           value={formData.password}
           onChange={handleChange}
-          className="w-full p-2 border rounded mb-4"
+          className="w-full p-2 border rounded mb-4 dark:text-white dark:border-white dark:placeholder-white"
         />
         <button
           type="submit"

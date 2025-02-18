@@ -11,7 +11,9 @@ const BlogCard = ({ blog }) => {
       className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4"
     >
       <h2 className="text-xl font-bold">{blog.title}</h2>
-      <p>{blog.content.substring(0, 100)}... </p>
+      <p className="text-gray-600 dark:text-gray-300">
+        {blog.content.substring(0, 100)}...{" "}
+      </p>
       <NavLink
         to={`/blog/${blog._id}`}
         className="text-blue-500 hover:underline"
