@@ -16,8 +16,8 @@ mongoose
   .then(() => console.log("Database Connected"))
   .catch((err) => console.log(err));
 
-app.use("./api/auth", authRoutes);
-app.use("./api/blogs", blogRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/blogs", blogRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
