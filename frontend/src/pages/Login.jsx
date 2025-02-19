@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -18,8 +19,12 @@ const Login = () => {
         formData
       );
       localStorage.setItem("token", response.data.token);
+      toast.success("Login Succesfull! Redirecting to home...");
       navigate("/");
     } catch (err) {
+      toast.error(
+        err.response?.data?.error || "Login failed! Please try again."
+      );
       console.error(err);
     }
   };

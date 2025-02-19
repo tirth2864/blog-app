@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -21,10 +22,11 @@ const Register = () => {
         "http://localhost:5000/api/auth/register",
         formData
       );
+      toast.success("Registration Successfull! Redirecting to Login...");
       console.log(res.data);
-      navigate("/login");
     } catch (err) {
       console.error(err);
+      toast.error(err.response?.data?.error || 'Registration failed. Please try again.');
     }
   };
 
