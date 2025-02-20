@@ -19,6 +19,7 @@ const Login = () => {
         formData
       );
       localStorage.setItem("token", response.data.token);
+      localStorage.setItem("userId", response.data.userId);
       toast.success("Login Succesfull! Redirecting to home...");
       navigate("/");
     } catch (err) {

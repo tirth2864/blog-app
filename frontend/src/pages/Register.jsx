@@ -23,6 +23,7 @@ const Register = () => {
         formData
       );
       toast.success("Registration Successfull! Redirecting to Login...");
+      navigate('/login');
       console.log(res.data);
     } catch (err) {
       console.error(err);

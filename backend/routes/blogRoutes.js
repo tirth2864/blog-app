@@ -1,11 +1,17 @@
 const express = require("express");
 const Blog = require("../models/Blog");
 const router = express.Router();
+const auth = require("../middleware/auth"); 
 
-router.post("/", async (req, res) => {
+router.post("/", auth, async (req, res) => {
   const { title, content, author, tags } = req.body;
   try {
-    const blog = new Blog({ title, content, author, tags });
+    const blog = new Blog({
+      title,
+      content,
+      author: req.user.id,
+      tags: tags.split(",").map((tag) => tag.trim()),
+    });
     await blog.save();
     res.status(201).json({ message: "Blog created Succesfully!", blog });
   } catch (err) {
