@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Blog from "./pages/Blog";
 import Navbar from "./components/Navbar";
+import Sidebar from "./pages/Sidebar";
 import "./App.css";
 
 const App = () => {
@@ -14,12 +15,17 @@ const App = () => {
     <Router>
       <div className="bg-gray-100 min-h-screen dark:bg-gray-900">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/blog/:id" element={<Blog />} />
-        </Routes>
+        <div className="flex">
+          <Sidebar />
+          <div className="flex-1 p-4 overflow-y-auto">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/blog/:id" element={<Blog />} />
+            </Routes>
+          </div>
+        </div>
         <ToastContainer
           position="top-right"
           autoClose={3000}
