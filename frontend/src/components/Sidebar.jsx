@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className="w-60 bg-white dark:bg-gray-800 shadow-lg sticky top-0 left-0 flex flex-col h-screen">
+    <div className="w-60 bg-white dark:bg-gray-700 shadow-lg sticky top-0 left-0 flex flex-col h-screen">
       <div className="p-4 flex-1">
         <h2 className="text-xl font-bold mb-4 text-gray-800 dark:text-white">
           Menu
@@ -26,7 +26,7 @@ const Sidebar = () => {
               to="/create"
               className={({ isActive }) =>
                 isActive
-                  ? "text-blue-500 dark:text-blue-400 "
+                  ? "text-blue-500 dark:text-blue-400"
                   : "text-gray-700 dark:text-gray-300 hover:text-blue-500"
               }
             >
