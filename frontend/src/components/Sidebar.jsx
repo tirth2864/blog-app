@@ -18,7 +18,7 @@ const Sidebar = () => {
                   : "text-gray-700 dark:text-gray-300 hover:text-blue-500"
               }
             >
-              Home
+              Blogs
             </NavLink>
           </li>
           <li>
