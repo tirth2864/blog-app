@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams, useNavigate } from "react-router-dom"; // Import useParams and useNavigate
+import { useParams, useNavigate } from "react-router-dom"; 
 import { motion } from "framer-motion";
 
 const Blog = () => {
-  const { id } = useParams(); // Now useParams is defined
-  const navigate = useNavigate(); // useNavigate is also defined
+  const { id } = useParams(); 
+  const navigate = useNavigate(); 
   const [blog, setBlog] = useState(null);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const Blog = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.5 }}
-        onClick={() => navigate(-1)} // Go back to the previous page
+        onClick={() => navigate(-1)}
         className="mb-4 text-blue-500 hover:underline"
       >
         &larr; Back
